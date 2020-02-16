@@ -3,4 +3,9 @@ project(chessboard_cover C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(chessboard_cover main.c)
+add_executable(chessboard_cover
+        src/main.c
+        src/datastructure.h
+        src/datastructure.c
+        src/algorithm.c
+        src/algorithm.h)
