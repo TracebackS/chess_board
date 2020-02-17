@@ -9,10 +9,10 @@
 #include <stdio.h>
 
 /* neighbour is a null pointer, it will be allocated in this function
- * return value is the num of neighbours, which are stored as a short list
- * return -1 if node is the final answer
+ * return 0 if no final answer was found
+ * return 1 if found
  */
-int findNeighbour(node_t *node, node_t **neighbour);
+int findNeighbour(node_t *node, node_t **neighbour, unsigned int k);
 
 void printNode(node_t *node, unsigned int k, FILE *outfile);
 

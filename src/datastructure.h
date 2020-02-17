@@ -38,7 +38,6 @@ typedef struct node
 typedef struct list
 {
 	node_t *head;
-	unsigned int k;
 } list_t;
 
 list_t *initList(unsigned int k, unsigned int pos);

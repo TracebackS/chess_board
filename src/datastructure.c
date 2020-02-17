@@ -22,7 +22,6 @@ list_t *initList(unsigned int k, unsigned int pos)
 	list->head->chess_board[pos] = SPECIAL;
 	list->head->next = NULL;
 	list->head->first_empty_pos = pos ? 0 : 1;
-	list->k = k;
 	return list;
 }
 

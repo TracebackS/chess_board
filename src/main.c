@@ -25,15 +25,18 @@ int main(int argc, char **argv)
 		node_t *node = pop(list);
 		printNode(node, k, fout);
 		node_t *neighbour = NULL;
-		int n_neighbour = findNeighbour(node, &neighbour);
-		if (n_neighbour == -1)
+		int find_answer = findNeighbour(node, &neighbour, k);
+		if (find_answer)
 		{
+			printNode(neighbour, k, fout);
+			freeNode(neighbour);
 			fprintf(fout, "SUCCESS\n");
 			fclose(fout);
 			freeList(list);
 			return 0;
 		}
 		insert(list, neighbour);
+		freeNode(node);
 	}
 	fprintf(fout, "No solution\n");
 	fclose(fout);
