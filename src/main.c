@@ -26,6 +26,7 @@ int main(int argc, char **argv)
 		printNode(node, k, fout);
 		node_t *neighbour = NULL;
 		int find_answer = findNeighbour(node, &neighbour, k);
+		freeNode(node);
 		if (find_answer)
 		{
 			printNode(neighbour, k, fout);
@@ -36,7 +37,6 @@ int main(int argc, char **argv)
 			return 0;
 		}
 		insert(list, neighbour);
-		freeNode(node);
 	}
 	fprintf(fout, "No solution\n");
 	fclose(fout);
